@@ -11,3 +11,7 @@ license: gnu general public licences v2 or later
 text domain: ds-theme 
 
 */
+
+h1{
+    color: red;
+}
