@@ -9,3 +9,5 @@
     <!-- this is form our theme -->
 </head>
 <body>
+
+<?php wp_nav_menu(array("theme_location"=>"primary")); ?>
