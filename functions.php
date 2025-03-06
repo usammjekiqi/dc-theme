@@ -22,4 +22,27 @@ add_action("init","ds_set_up");
 
 add_theme_support("post-thumbnails");
 
+
+function themenam_widgets_init(){
+    redister_sidebar(array(
+        'name' => __('primary sidebar','thene_name'),
+        'id' => 'sidebar_1',
+        'after_wiget'=> '</aside id="%1$s" class="widget %2$s">',
+        'after_wiget'=> '</aside>',
+        'before_title'=> '<h3 class="widget_title">',
+        'after_title'=> '</h3>'
+
+
+    ));
+    register_sidebar(array(
+        'name' => __('secondary  sidebar','thene_name'),
+        'id' => 'sidebar_2',
+        'after_wiget'=> '<ul><li> id="%1$s" class="widget %2$s">',
+        'after_wiget'=> '</li></ul>',
+        'before_title'=> '<h3 class="widget_title">',
+        'after_title'=> '</h3>'
+
+    ))
+}
+
 ?>
