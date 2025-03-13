@@ -42,7 +42,7 @@ function themenam_widgets_init(){
         'before_title'=> '<h3 class="widget_title">',
         'after_title'=> '</h3>'
 
-    ))
+    ));
 }
 
 ?>
