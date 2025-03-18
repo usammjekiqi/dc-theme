@@ -1,0 +1,35 @@
+<?php get_headers();?>
+<div class="row">
+    <div class="col-lg-8">
+    <?php
+    if(have_posts()):
+        while(have_posts(): )the_post();?>
+
+        <article id="post<?php the_ID();?>" class="<?php post_class();?>">
+        <?php the_title();?>
+        <div class="pull-right"><?php the_post_thumbnail();?></div>
+        <small>
+            <?php the_category();?>||<?php the_tags();?> || <?php edit_post_link();?>
+        </small>
+        <?php the_category();?>
+
+
+        </article>
+        <hr>
+        <?php
+        if(comments_open()){
+            comments_template():
+        }else{
+            echo"<h5> sorry comments are closed!!!</h5>"
+        ?>
+        <?php
+        endwhile;
+        endif;
+
+        ?>
+    </div>
+    <div class="col-lg-4">
+
+    </div>
+</div>
+<?php get_footer();?>
