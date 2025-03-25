@@ -45,4 +45,35 @@ function themenam_widgets_init(){
     ));
 }
 
+
+function create_post_type(){
+    $labels=array(
+        'name'=>__('Movies'),
+        'singular_name'=>__('movie'),
+        'add_new'=>__('Add Movie','movie'),
+        'add_new-item'=>__('Add New Movie'),
+        'edit_item'=>__('Edit Movie'),
+        'new_items'=>__('New Movie'),
+        'all_item'=>__('All Movie'),
+        'view_item'=>__('View Movies'),
+        'search_item'=>__('Search Movie'),
+        'not_found'=>__('No movies found'),
+        'not_found_in_trash'=>__('No movies found in trash'),
+        'menu_name'=>"Movie"
+        
+    );
+    $args=array(
+        'labels'=>$labels,
+        'description'=>"Movi and single movie details",
+        'public'=> true,
+        'menu_position'=>5,
+        'supports' =>array('title','editor','thumbnail','excerpt','commenst'),
+        'menu_icon'=>'dashicons-button',
+        'has_archive'=> true
+
+    );
+    register_post_type("movie",$args);
+}
+
+add_action('init','create_post_type');
 ?>
