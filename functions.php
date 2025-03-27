@@ -76,4 +76,19 @@ function create_post_type(){
 }
 
 add_action('init','create_post_type');
+
+
+function movis_taxonomy(){
+    $args[
+        'labels' => array(
+            'name' => ('Movie Genre'),
+            'singular_name' => ('Movie Genre'),
+            'add_new_item' => ('Add New Movie Genre'),
+            'edit_item' => ('Edit Movie Generas'),
+        ),
+        'public' => true,
+        'hierarchical' => true,
+    ]
+};
+dd_action('init','movis_taxonomy');
 ?>
